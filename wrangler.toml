@@ -1,0 +1,7 @@
+name = "time-authenticator"
+main = "worker.js"
+compatibility_date = "2026-09-16"
+
+[[kv_namespaces]]
+binding = "kv"
+id = "60253868bbcd49ab91dd91d2784767bc"
