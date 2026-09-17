@@ -1,0 +1,15 @@
+{
+  "name": "authenticator-2fa",
+  "version": "1.0.0",
+  "description": "Time-based TOTP authenticator with Cloudflare Workers",
+  "type": "module",
+  "main": "src/worker.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^3.51.2"
+  }
+}
