@@ -1,4 +1,0 @@
-name = "authenticator-2fa"
-main = "src/worker.js"
-compatibility_date = "2024-09-16"
-compatibility_flags = ["nodejs_compat"]
