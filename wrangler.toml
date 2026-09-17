@@ -2,17 +2,3 @@ name = "authenticator-2fa"
 main = "src/worker.js"
 compatibility_date = "2024-09-16"
 compatibility_flags = ["nodejs_compat"]
-
-[[migrations]]
-tag = "v1"
-new_sqlite_db = "authenticator"
-
-[env.production]
-name = "authenticator-2fa-prod"
-routes = [
-  { pattern = "auth.nathakorn-kamsaeng.workers.dev/*", zone_name = "example.com" }
-]
-
-[build]
-command = "npm install"
-cwd = "./"
