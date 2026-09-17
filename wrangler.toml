@@ -1,7 +1,18 @@
-name = "time-authenticator"
-main = "worker.js"
-compatibility_date = "2026-09-16"
+name = "authenticator-2fa"
+main = "src/worker.js"
+compatibility_date = "2024-09-16"
+compatibility_flags = ["nodejs_compat"]
 
-[[kv_namespaces]]
-binding = "kv"
-id = "60253868bbcd49ab91dd91d2784767bc"
+[[migrations]]
+tag = "v1"
+new_sqlite_db = "authenticator"
+
+[env.production]
+name = "authenticator-2fa-prod"
+routes = [
+  { pattern = "auth.nathakorn-kamsaeng.workers.dev/*", zone_name = "example.com" }
+]
+
+[build]
+command = "npm install"
+cwd = "./"
